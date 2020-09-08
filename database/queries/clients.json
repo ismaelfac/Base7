@@ -1,6 +1,6 @@
 [
   {
-   "id": "72288959",
+   "dni": "72288959",
    "first_name": "ISMAEL E",
    "last_name": "LASTRE ALVAREZ",
    "slug" : "ismael-lastre-alvarez",
@@ -17,10 +17,10 @@
    "latitude": "23",
    "longitude": "25",
    "birthdate": "1983/12/02",
-   "active": 1
+   "state_customer": "Activo"
   },
   {
-   "id": "1140830970",
+   "dni": "1140830970",
    "first_name": "VALERIA REMEDIOS",
    "last_name": "VASQUEZ CUESTAS",
    "slug" : "valeria-remedios-vasquez-cuestas",
@@ -37,17 +37,17 @@
    "latitude": "23",
    "longitude": "25",
    "birthdate": "1990/02/02",
-   "active": 1
+   "state_customer": "Activo"
   },
   {
-   "id": "45234567",
+   "dni": "45234567",
    "first_name": "NATALY REMEDIOS",
    "last_name": "PORLMAN CUESTAS",
    "slug" : "nataly-remedios-porlman-cuestas",
    "type_dni": "1",
    "phone": "3113258468",
    "landline": "3643804",
-   "email": "vvasquez668@gmail.com",
+   "email": "nporlam@gmail.com",
    "address": "CLL 47D #1a4-82",
    "country_id": "45",
    "departament_id": "2",
@@ -57,17 +57,17 @@
    "latitude": "23",
    "longitude": "25",
    "birthdate": "1990/02/02",
-   "active": 1
+   "state_customer": "Activo"
   },
   {
-   "id": "123546709",
+   "dni": "123546709",
    "first_name": "EDWIN DE JESUS",
    "last_name": "BERMEJO PAREJA",
    "slug" : "valeria-remedios-vasquez-cuestas",
    "type_dni": "1",
    "phone": "3113258468",
    "landline": "3643804",
-   "email": "vvasquez668@gmail.com",
+   "email": "edwinbermejo@gmail.com",
    "address": "CLL 42D #14-82",
    "country_id": "45",
    "departament_id": "2",
@@ -77,6 +77,6 @@
    "latitude": "23",
    "longitude": "25",
    "birthdate": "1990/02/02",
-   "active": 1
+   "state_customer": "Activo"
   }
 ]
