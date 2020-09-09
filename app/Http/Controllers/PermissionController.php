@@ -10,8 +10,7 @@ class PermissionController extends Controller
     public function index()
     {
         $permissions = Permission::paginate(5);
-        //dd($permissions);
-        return view('admin.modules.permissions.index', compact('permissions'));
+        return response()->json($permissions, 200); //devuelvo los roles en la variable roles.
     }
     /**
      * Show the form for creating a new resource.
@@ -45,7 +44,7 @@ class PermissionController extends Controller
      */
     public function edit(Permission $permission)
     {
-        return view('admin.modules.permissions.edit', compact('permission'));
+        return response()->json([$permissions], 200);
     }
 
     /**

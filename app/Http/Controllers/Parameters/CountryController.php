@@ -22,7 +22,7 @@ class CountryController extends Controller
     {
         $roles_unique = Role::where('special', 'all-access')->orWhere('special', 'no-access')->get();
         $roles_personalized = Role::where('special', null)->paginate(5);
-        return view('admin2.modules.users.create', compact('roles_unique', 'roles_personalized'));
+        return response()->json([$roles_unique, $roles_personalized], 200);
     }
 
     /**
