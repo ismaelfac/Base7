@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Settings\Controllers\Settings;
+namespace App\Http\Controllers\Settings;
 
 use App\Http\Controllers\Controller;
 use Caffeinated\Shinobi\Models\Role;
@@ -14,14 +14,9 @@ class PermissionsRoleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function getpermissions_role($id)
+    public function index($id)
     {
-        $roles = Role::orderBy('updated_at', 'DESC')->find($id);
-        $permissions_role = $roles->permissions()->get();
-        return response()->json($permissions_role, 200); //devuelvo los roles en la variable roles.
     }
-
-    public function index(){}
 
     /**
      * Show the form for creating a new resource.
@@ -52,7 +47,9 @@ class PermissionsRoleController extends Controller
      */
     public function show($id)
     {
-        //
+        $roles = Role::orderBy('updated_at', 'DESC')->find($id);
+        $permissions_role = $roles->permissions()->get();
+        return response()->json($permissions_role, 200); //devuelvo los roles en la variable roles.
     }
 
     /**

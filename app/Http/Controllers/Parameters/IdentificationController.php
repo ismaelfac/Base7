@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Parameters;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Modelsgenerals\Identification;
 
 class IdentificationController extends Controller
 {
@@ -38,7 +39,7 @@ class IdentificationController extends Controller
         //
     }
 
-    /**
+        /**
      * Display the specified resource.
      *
      * @param  int  $id
@@ -46,8 +47,10 @@ class IdentificationController extends Controller
      */
     public function show($id)
     {
-        //
+        $identifications = Identification::all();
+        return response()->json($identifications);
     }
+
 
     /**
      * Show the form for editing the specified resource.

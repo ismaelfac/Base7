@@ -17,8 +17,7 @@ class DepartamentController extends Controller
      */
     public function index($country_id)
     {
-        $departaments = Departament::where('country_id',$country)->get();
-        return response()->json($departaments);
+
     }
 
     /**
@@ -44,6 +43,17 @@ class DepartamentController extends Controller
         dd($request->all());
         $departament = Departament::create($request->all());
         return redirect()->route('departaments.edit', $departament->id)->with('info', 'Estado Guardado con Exito');
+    }
+        /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $departaments = Departament::where('country_id',$id)->get();
+        return response()->json($departaments);
     }
 
     /**

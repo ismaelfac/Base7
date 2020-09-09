@@ -13,19 +13,15 @@ Route::get('getIdentification', 'GeneralParametersController@getIdentification')
 
 Route::group(['prefix' => 'admin'], function () {
     //** CRUD settings **/
-    Route::apiResources([
-        'roles' => Settings\RoleController::class,
-        'permissions' => Settings\PermissionController::class,
-        'permissions_role' => Settings\PermissionsRoleController::class,
-        //** CRUD Paramaters **/
-        'countries' => Parameters\CountryController::class,
-        'departaments' => Parameters\CountryController::class,
-        'municipalities' => Parameters\CountryController::class,
-        'locations' => Parameters\CountryController::class,
-        'neigborhoods' => Parameters\CountryController::class,
-    ]);
-    Route::get('systems', 'DashboardSystemController@index');
-    Route::get('parameters', 'DashboardParametersController@index');
-    Route::get('getpermissions_role/{id}', 'Settings\PermissionsRoleController@getpermissions_role');
-    Route::resource('permissions_role', 'PermissionsRoleController');
+    Route::resource('roles', Settings\PermissionsRoleController::class)->parameters(['roles' => 'role_id']);
+    Route::resource('permissions', Settings\PermissionsRoleController::class)->parameters(['permissions' => 'role_id']);
+    Route::resource('permissions_role', Settings\PermissionsRoleController::class)->parameters(['permissions_role' => 'role_id']);
+    Route::resource('countries', Parameters\CountryController::class);
+    Route::resource('departaments', Parameters\DepartamentController::class)->parameters(['departaments' => 'country_id']);
+    Route::resource('municipalities', Parameters\MunicipalityController::class)->parameters(['municipalities' => 'departament_id']);
+    Route::resource('locations', Parameters\LocationController::class)->parameters(['locations' => 'municipality_id']);
+    Route::resource('neigborhoods', Parameters\NeighborhoodController::class)->parameters(['neigborhoods' => 'location_id']);
+
+    Route::resource('systems', 'DashboardSystemController');
+    Route::resource('parameters', 'DashboardParametersController');
 });
