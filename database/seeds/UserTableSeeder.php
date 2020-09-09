@@ -43,7 +43,7 @@ class UserTableSeeder extends Seeder
             'name' => 'ISMAEL E. LASTRE ALVAREZ',
             'email' => 'ismaelfac@gmail.com',
             'password' => bcrypt('BrwQ12-123'),
-            'customer_id' => 1,
+            'person_id' => 1,
             'is_active' => true,
         ]);
         $user->roles()->sync([1 => ['is_active' => true]]); //update roles
@@ -51,7 +51,7 @@ class UserTableSeeder extends Seeder
             'name' => 'SINFOROSO GUMERSINDO',
             'email' => 'director@mail.com',
             'password' => bcrypt('123'),
-            'customer_id'=> 2,
+            'person_id'=> 2,
             'is_active' => true,
         ]);
         $user->roles()->sync([1 => ['is_active' => true]]); //update roles
@@ -59,7 +59,7 @@ class UserTableSeeder extends Seeder
             'name' => 'EMPERATRIS BENAVIDEZ ',
             'email' => 'asistentecomercial@MAIL.com',
             'password' => bcrypt('123'),
-            'customer_id'=> 3,
+            'person_id'=> 3,
             'is_active' => true,
         ]);
         $user->roles()->sync([3 => ['is_active' => true],4]); //update roles 3, 4 en usuario3

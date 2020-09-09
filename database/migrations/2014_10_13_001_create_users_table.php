@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->boolean('is_active')->default(false);
-            $table->foreignId('customer_id')->references('id')->on('customers')->onUpdate('cascade');
+            $table->foreignId('person_id')->references('id')->on('people')->onUpdate('cascade');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -1,15 +1,20 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateCustomersTable extends Migration
+class CreatePeopleTable extends Migration
 {
-      public function up()
-      {
-            Schema::create('customers', function (Blueprint $table) {
-                  $table->engine = 'InnoDB';
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('people', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
                   $table->bigIncrements('id');
                   $table->string('dni', 30);
                   $table->integer('type_dni')->unsigned();
@@ -42,16 +47,16 @@ class CreateCustomersTable extends Migration
                   $table->enum('state_customer', ['Activo', 'Inactivo', 'Suspendido'])->default('Inactivo');
                   $table->timestamps();
                   $table->softDeletes();
-            });
-      }
+        });
+    }
 
-      /**
-       * Reverse the migrations.
-       *
-       * @return void
-       */
-      public function down()
-      {
-            Schema::dropIfExists('customers');
-      }
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('people');
+    }
 }

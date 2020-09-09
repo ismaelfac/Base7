@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             'permissions',
             'roles',
             'role_user',
-            'customers',
+            'people',
             'identifications',
             'neighborhoods',
             'locations',
@@ -37,6 +37,7 @@ class DatabaseSeeder extends Seeder
             NeighborhoodTableSeeder::class,
             IdentificationTableSeeder::class,
             CivilstatusTableSeeder::class,
+            PersonTableSeeder::class,
             CustomersTableSeeder::class,
             UserTableSeeder::class
         ]);
