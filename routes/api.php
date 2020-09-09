@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'admin'], function () {
     //** CRUD settings **/
-    Route::resource('roles', Settings\PermissionsRoleController::class)->parameters(['roles' => 'role_id']);
-    Route::resource('permissions', Settings\PermissionsRoleController::class)->parameters(['permissions' => 'role_id']);
+    Route::resource('roles', Settings\RoleController::class)->parameters(['roles' => 'role_id']);
+    Route::resource('permissions', Settings\PermissionController::class);
     Route::resource('permissions_role', Settings\PermissionsRoleController::class)->parameters(['permissions_role' => 'role_id']);
 
     //** PARAMETERS  **/

@@ -55,10 +55,10 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Role $role)
+    public function show($id)
     {
-        $permissions = Permission::paginate(5);
-        return response()->json([$role, $permissions], 200);
+        $role = Role::find($id);
+        return response()->json($role, 200);
     }
 
     /**

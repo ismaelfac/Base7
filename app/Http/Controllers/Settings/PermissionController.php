@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Settings\Controllers\Settings;
+namespace App\Http\Controllers\Settings;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -11,7 +11,7 @@ class PermissionController extends Controller
     public function index()
     {
         $permissions = Permission::paginate(5);
-        return response()->json($permissions, 200); //devuelvo los roles en la variable roles.
+        return response()->json($permissions, 200);
     }
     /**
      * Show the form for creating a new resource.
@@ -22,7 +22,7 @@ class PermissionController extends Controller
     {
         $roles_unique = Role::where('special', 'all-access')->orWhere('special', 'no-access')->get();
         $roles_personalized = Role::where('special', null)->paginate(5);
-        return view('admin.modules.users.create', compact('roles_unique', 'roles_personalized'));
+        return response()->json([$roles_unique, $roles_personalized], 200);
     }
 
     /**
@@ -35,6 +35,12 @@ class PermissionController extends Controller
     {
         $permission = Permission::create($request::all());
         return redirect()->route('permissions.edit', $permission->id)->with('info', 'Usuario Guardado con Exito');
+    }
+
+    public function show($role_id)
+    {
+        $permissions = Permission::paginate(5);
+        return response()->json($permissions, 200);
     }
 
     /**
