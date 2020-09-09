@@ -15,7 +15,8 @@ class IdentificationController extends Controller
      */
     public function index()
     {
-        //
+        $identifications = Identification::all();
+        return response()->json($identifications);
     }
 
     /**
@@ -47,8 +48,7 @@ class IdentificationController extends Controller
      */
     public function show($id)
     {
-        $identifications = Identification::all();
-        return response()->json($identifications);
+
     }
 
 

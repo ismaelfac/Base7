@@ -16,6 +16,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('roles', Settings\PermissionsRoleController::class)->parameters(['roles' => 'role_id']);
     Route::resource('permissions', Settings\PermissionsRoleController::class)->parameters(['permissions' => 'role_id']);
     Route::resource('permissions_role', Settings\PermissionsRoleController::class)->parameters(['permissions_role' => 'role_id']);
+    Route::resource('identifications', Parameters\IdentificationController::class);
+    Route::resource('civil_status', Parameters\IdentificationController::class);
     Route::resource('countries', Parameters\CountryController::class);
     Route::resource('departaments', Parameters\DepartamentController::class)->parameters(['departaments' => 'country_id']);
     Route::resource('municipalities', Parameters\MunicipalityController::class)->parameters(['municipalities' => 'departament_id']);
