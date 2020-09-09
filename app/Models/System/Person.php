@@ -1,19 +1,18 @@
 <?php
 
-namespace App;
+namespace App\Models\System;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Modelsgenerals \{
-    Country, Departament, Identification, Location, Municipality, Neighborhood, CustomerRol, ClientType
+    Country, Departament, Identification, Location, Municipality, Neighborhood, ClientType
 };
 use Carbon\Carbon as Carbon;
 
-class Customer extends Model
+class Person extends Model
 {
-
-    protected $fillable = ['person_id','state_customer'];
+    protected $fillable = ['dni','first_name', 'last_name', 'slug', 'dni', 'type_dni', 'phone', 'landline', 'email', 'address', 'country_id', 'departament_id', 'municipality_id', 'location_id', 'neighborhood_id', 'latitude', 'longitude', 'birthdate', 'state_people'];
     protected $casts = [
 
     ];
