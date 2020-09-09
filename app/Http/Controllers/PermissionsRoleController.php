@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Caffeinated\Shinobi\Models\Role;
+use Caffeinated\Shinobi\Models\Permission;
 use Illuminate\Http\Request;
 
 class PermissionsRoleController extends Controller
@@ -13,8 +15,9 @@ class PermissionsRoleController extends Controller
      */
     public function index()
     {
-        $permissions = Permission::paginate(5);
-        return response()->json($permissions, 200); //devuelvo los roles en la variable roles.
+        $roles = Role::orderBy('updated_at', 'DESC')->find(3);
+        $permissions_role = $roles->permissions()->get();
+        return response()->json($permissions_role, 200); //devuelvo los roles en la variable roles.
     }
 
     /**

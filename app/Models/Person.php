@@ -12,7 +12,7 @@ use Carbon\Carbon as Carbon;
 
 class Person extends Model
 {
-    protected $fillable = ['dni','first_name', 'last_name', 'slug', 'dni', 'type_dni', 'phone', 'landline', 'email', 'address', 'country_id', 'departament_id', 'municipality_id', 'location_id', 'neighborhood_id', 'latitude', 'longitude', 'birthdate', 'state_customer'];
+    protected $fillable = ['dni','first_name', 'last_name', 'slug', 'dni', 'type_dni', 'phone', 'landline', 'email', 'address', 'country_id', 'departament_id', 'municipality_id', 'location_id', 'neighborhood_id', 'latitude', 'longitude', 'birthdate', 'state_people'];
     protected $casts = [
 
     ];
