@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Settings\Controllers;
+namespace App\Http\Settings\Controllers\Settings;
 
+use App\Http\Controllers\Controller;
 use Caffeinated\Shinobi\Models\Role;
 use Caffeinated\Shinobi\Models\Permission;
 use Illuminate\Http\Request;

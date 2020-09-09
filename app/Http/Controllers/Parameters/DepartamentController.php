@@ -15,10 +15,10 @@ class DepartamentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($country_id)
     {
-        $departaments = Departament::getDepartamentAttribute();
-        return view('admin2.parameters.departaments.index', compact('departaments'));
+        $departaments = Departament::where('country_id',$country)->get();
+        return response()->json($departaments);
     }
 
     /**

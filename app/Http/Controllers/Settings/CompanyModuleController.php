@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Settings\Controllers;
+namespace App\Http\Settings\Controllers\Settings;
 
 use App\CompanyModule;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class CompanyModuleController extends Controller
 {

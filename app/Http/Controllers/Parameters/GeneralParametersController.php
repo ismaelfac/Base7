@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Settings\Controllers;
+namespace App\Http\Settings\Controllers\Parameters;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Modelsgenerals\{ Civilstatus, Country, Departament, Municipality, Location, Neighborhood, Identification };
 
 class GeneralParametersController extends Controller

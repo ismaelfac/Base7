@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Settings\Controllers;
+namespace App\Http\Controllers\Settings;
 
 use Illuminate\Support\Facades\Auth;
 use Caffeinated\Shinobi\Models\Role;
 use Caffeinated\Shinobi\Models\Permission;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class RoleController extends Controller
 {

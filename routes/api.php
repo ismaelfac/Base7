@@ -13,17 +13,19 @@ Route::get('getIdentification', 'GeneralParametersController@getIdentification')
 
 Route::group(['prefix' => 'admin'], function () {
     //** CRUD settings **/
+    Route::apiResources([
+        'roles' => Settings\RoleController::class,
+        'permissions' => Settings\PermissionController::class,
+        'permissions_role' => Settings\PermissionsRoleController::class,
+        //** CRUD Paramaters **/
+        'countries' => Parameters\CountryController::class,
+        'departaments' => Parameters\CountryController::class,
+        'municipalities' => Parameters\CountryController::class,
+        'locations' => Parameters\CountryController::class,
+        'neigborhoods' => Parameters\CountryController::class,
+    ]);
     Route::get('systems', 'DashboardSystemController@index');
     Route::get('parameters', 'DashboardParametersController@index');
-    Route::resource('roles', 'RoleController');
-    Route::resource('permissions', 'PermissionController');
-    Route::get('getpermissions_role/{id}', 'PermissionsRoleController@getpermissions_role');
+    Route::get('getpermissions_role/{id}', 'Settings\PermissionsRoleController@getpermissions_role');
     Route::resource('permissions_role', 'PermissionsRoleController');
-
-    //** CRUD Paramaters **/
-    Route::resource('countries', 'UserController');
-    Route::resource('departaments   ', 'RoleController');
-    Route::resource('municipalities', 'RoleController');
-    Route::resource('locations', 'RoleController');
-    Route::resource('neigborhoods', 'RoleController');
 });
