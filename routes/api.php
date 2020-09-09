@@ -17,6 +17,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('parameters', 'DashboardParametersController@index');
     Route::resource('roles', 'RoleController');
     Route::resource('permissions', 'PermissionController');
+    Route::get('getpermissions_role/{id}', 'PermissionsRoleController@getpermissions_role');
     Route::resource('permissions_role', 'PermissionsRoleController');
 
     //** CRUD Paramaters **/

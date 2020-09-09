@@ -13,12 +13,14 @@ class PermissionsRoleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function getpermissions_role($id)
     {
-        $roles = Role::orderBy('updated_at', 'DESC')->find(3);
+        $roles = Role::orderBy('updated_at', 'DESC')->find($id);
         $permissions_role = $roles->permissions()->get();
         return response()->json($permissions_role, 200); //devuelvo los roles en la variable roles.
     }
+
+    public function index(){}
 
     /**
      * Show the form for creating a new resource.
