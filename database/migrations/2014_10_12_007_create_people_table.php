@@ -44,7 +44,7 @@ class CreatePeopleTable extends Migration
                   $table->string('latitude')->nullable();
                   $table->string('longitude')->nullable();
                   $table->date('birthdate');
-                  $table->enum('state_customer', ['Activo', 'Inactivo', 'Suspendido'])->default('Inactivo');
+                  $table->enum('state_people', ['Activo', 'Inactivo', 'Suspendido'])->default('Inactivo');
                   $table->timestamps();
                   $table->softDeletes();
         });

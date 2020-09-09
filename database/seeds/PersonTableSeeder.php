@@ -28,7 +28,7 @@ class PersonTableSeeder extends Seeder
                 'latitude' => $value['latitude'],
                 'longitude' => $value['longitude'],
                 'birthdate' => $value['birthdate'],
-                'state_customer' => $value['state_customer'],
+                'state_people' => $value['state_people'],
             ]);
         }
     }
