@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Modules;
+use App\Models\Profile;
 use Illuminate\Http\Request;
 
-class ModulesController extends Controller
+class ProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class ModulesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Modules  $modules
+     * @param  \App\Models\Profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function show(Modules $modules)
+    public function show(Profile $profile)
     {
         //
     }
@@ -52,10 +52,10 @@ class ModulesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Modules  $modules
+     * @param  \App\Models\Profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function edit(Modules $modules)
+    public function edit(Profile $profile)
     {
         //
     }
@@ -64,10 +64,10 @@ class ModulesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Modules  $modules
+     * @param  \App\Models\Profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Modules $modules)
+    public function update(Request $request, Profile $profile)
     {
         //
     }
@@ -75,10 +75,10 @@ class ModulesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Modules  $modules
+     * @param  \App\Models\Profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Modules $modules)
+    public function destroy(Profile $profile)
     {
         //
     }

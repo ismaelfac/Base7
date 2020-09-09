@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Settings\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Caffeinated\Shinobi\Models\Role;

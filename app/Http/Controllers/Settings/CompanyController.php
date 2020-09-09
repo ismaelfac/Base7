@@ -1,26 +1,21 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Settings\Controllers;
 
-use Caffeinated\Shinobi\Models\Role;
-use Caffeinated\Shinobi\Models\Permission;
+use App\Company;
 use Illuminate\Http\Request;
 
-class PermissionsRoleController extends Controller
+class CompanyController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function getpermissions_role($id)
+    public function index()
     {
-        $roles = Role::orderBy('updated_at', 'DESC')->find($id);
-        $permissions_role = $roles->permissions()->get();
-        return response()->json($permissions_role, 200); //devuelvo los roles en la variable roles.
+        //
     }
-
-    public function index(){}
 
     /**
      * Show the form for creating a new resource.
@@ -46,10 +41,10 @@ class PermissionsRoleController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Company $company)
     {
         //
     }
@@ -57,10 +52,10 @@ class PermissionsRoleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Company $company)
     {
         //
     }
@@ -69,10 +64,10 @@ class PermissionsRoleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Company $company)
     {
         //
     }
@@ -80,10 +75,10 @@ class PermissionsRoleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Company $company)
     {
         //
     }

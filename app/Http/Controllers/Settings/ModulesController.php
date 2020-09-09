@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Settings\Controllers;
 
-use App\CompanyModule;
+use App\Modules;
 use Illuminate\Http\Request;
 
-class CompanyModuleController extends Controller
+class ModulesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class CompanyModuleController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\CompanyModule  $companyModule
+     * @param  \App\Modules  $modules
      * @return \Illuminate\Http\Response
      */
-    public function show(CompanyModule $companyModule)
+    public function show(Modules $modules)
     {
         //
     }
@@ -52,10 +52,10 @@ class CompanyModuleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\CompanyModule  $companyModule
+     * @param  \App\Modules  $modules
      * @return \Illuminate\Http\Response
      */
-    public function edit(CompanyModule $companyModule)
+    public function edit(Modules $modules)
     {
         //
     }
@@ -64,10 +64,10 @@ class CompanyModuleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\CompanyModule  $companyModule
+     * @param  \App\Modules  $modules
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, CompanyModule $companyModule)
+    public function update(Request $request, Modules $modules)
     {
         //
     }
@@ -75,10 +75,10 @@ class CompanyModuleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\CompanyModule  $companyModule
+     * @param  \App\Modules  $modules
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CompanyModule $companyModule)
+    public function destroy(Modules $modules)
     {
         //
     }

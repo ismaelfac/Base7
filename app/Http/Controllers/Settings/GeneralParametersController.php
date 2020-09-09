@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Settings\Controllers;
 
 use Illuminate\Http\Request;
 use App\Modelsgenerals\{ Civilstatus, Country, Departament, Municipality, Location, Neighborhood, Identification };
