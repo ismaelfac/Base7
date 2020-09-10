@@ -28,9 +28,11 @@ class DatabaseSeeder extends Seeder
             'municipalities',
             'departaments',
             'countries',
-            'identifications'
+            'identifications',
+            'modules'
         ]);
         $this->call([
+            ModuleTableSeeder::class,
             PermissionsTableSeeder::class,
             CountryTableSeeder::class,
             DepartamentTableSeeder::class,

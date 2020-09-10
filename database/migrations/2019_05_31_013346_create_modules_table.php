@@ -6,11 +6,6 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateModulesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('modules', function (Blueprint $table) {
@@ -18,7 +13,7 @@ class CreateModulesTable extends Migration
             $table->id();
             $table->string('title');
             $table->mediumText('description');
-            $table->boolean('state')->default(false);
+            $table->boolean('is_state')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });
