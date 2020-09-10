@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CompanyModule extends Model
 {
-    use SoftDeletes;
+    protected $table = 'companies_modules';
     protected $fillable = ['company_id','module_id'];
     protected $casts = [];
 }

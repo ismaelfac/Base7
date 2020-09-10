@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
             'departaments',
             'countries',
             'identifications',
+            'companies_modules',
             'modules'
         ]);
         $this->call([
@@ -44,6 +45,7 @@ class DatabaseSeeder extends Seeder
             PersonTableSeeder::class,
             CustomersTableSeeder::class,
             CompanyTableSeeder::class,
+            CompanyModuleTableSeeder::class,
             UserTableSeeder::class
         ]);
     }
