@@ -8,6 +8,9 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('roles', Settings\RoleController::class)->parameters(['roles' => 'role_id']);
     Route::resource('permissions', Settings\PermissionController::class);
     Route::resource('permissions_role', Settings\PermissionsRoleController::class)->parameters(['permissions_role' => 'role_id']);
+    Route::resource('systems', Settings\DashboardSystemController::class);
+    Route::resource('parameters', Settings\DashboardParametersController::class);
+    Route::resource('modules', Settings\ModuleController::class);
 
     //** PARAMETERS  **/
     //** CRUD BASIC INFO **/
@@ -18,7 +21,4 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('municipalities', Parameters\MunicipalityController::class)->parameters(['municipalities' => 'departament_id']);
     Route::resource('locations', Parameters\LocationController::class)->parameters(['locations' => 'municipality_id']);
     Route::resource('neigborhoods', Parameters\NeighborhoodController::class)->parameters(['neigborhoods' => 'location_id']);
-
-    Route::resource('systems', 'DashboardSystemController');
-    Route::resource('parameters', 'DashboardParametersController');
 });

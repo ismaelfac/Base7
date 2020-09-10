@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Settings\Controllers\Settings;
+namespace App\Http\Controllers\Settings;
 
 use App\Modules;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ModulesController extends Controller
+class ModuleController extends Controller
 {
     /**
      * Display a listing of the resource.
