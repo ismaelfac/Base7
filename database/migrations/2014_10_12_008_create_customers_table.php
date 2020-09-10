@@ -10,7 +10,7 @@ class CreateCustomersTable extends Migration
       {
             Schema::create('customers', function (Blueprint $table) {
                   $table->engine = 'InnoDB';
-                  $table->bigIncrements('id');
+                  $table->id();
                   $table->foreignId('person_id')->references('id')->on('people')->onUpdate('cascade');
                   $table->enum('state_customer', ['Activo', 'Inactivo', 'Suspendido'])->default('Inactivo');
                   $table->timestamps();

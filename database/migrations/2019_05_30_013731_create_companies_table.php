@@ -15,11 +15,11 @@ class CreateCompaniesTable extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->increments('id');
-            $table->string('title');
-            $table->mediumText('description');
-            $table->boolean('state')->default(false);
+            $table->id();
+            $table->foreignId('person_id')->references('id')->on('people')->onUpdate('cascade');
+            $table->enum('state_company', ['Activo', 'Inactivo', 'Suspendido'])->default('Inactivo');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

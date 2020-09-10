@@ -6,16 +6,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Modelsgenerals \{
-    Country, Departament, Identification, Location, Municipality, Neighborhood, ClientType
+    Country, Departament, Identification, Location, Municipality, Neighborhood
 };
 use Carbon\Carbon as Carbon;
 
 class Person extends Model
 {
-    protected $fillable = ['dni','first_name', 'last_name', 'slug', 'dni', 'type_dni', 'phone', 'landline', 'email', 'address', 'country_id', 'departament_id', 'municipality_id', 'location_id', 'neighborhood_id', 'latitude', 'longitude', 'birthdate', 'state_people'];
-    protected $casts = [
-
-    ];
+    protected $fillable = ['dni', 'type_dni', 'business_name', 'first_name', 'last_name', 'slug', 'gender', 'phone', 'landline', 'email', 'address', 'country_id', 'departament_id', 'municipality_id', 'location_id', 'neighborhood_id', 'latitude', 'longitude', 'birthdate', 'state_people'];
+    protected $casts = [];
 
     public function country()
     {
@@ -40,9 +38,9 @@ class Person extends Model
     public function getCreatedAtAttribute($date) { return Carbon::createFromFormat('Ymd H:i:s', $date)->format('Ym-d'); }
     public function getUpdatedAtAttribute($date) { return Carbon::createFromFormat('Ymd H:i:s', $date)->format('Ym-d'); }
 
-    public static function getcustomersAttribute()
+    public static function getpeopleAttribute()
     {
-        $customers = Customer::query()->with('identification', 'country', 'departament', 'location', 'neighborhood')->paginate(5);
-        return $customers;
+        $people = Person::query()->with('identification', 'country', 'departament', 'location', 'neighborhood')->paginate(5);
+        return $people;
     }
 }

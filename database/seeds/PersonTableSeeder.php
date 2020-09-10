@@ -13,6 +13,7 @@ class PersonTableSeeder extends Seeder
             Person::create([
                 'type_dni' => $value['type_dni'],
                 'dni' => $value['dni'],
+                "business_name" => $value['business_name'],
                 'first_name' => $value['first_name'],
                 'last_name' => $value['last_name'],
                 'slug' => $value['slug'],

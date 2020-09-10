@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
             'roles',
             'role_user',
             'people',
+            'customers',
+            'companies',
             'identifications',
             'neighborhoods',
             'locations',
@@ -39,6 +41,7 @@ class DatabaseSeeder extends Seeder
             CivilstatusTableSeeder::class,
             PersonTableSeeder::class,
             CustomersTableSeeder::class,
+            CompanyTableSeeder::class,
             UserTableSeeder::class
         ]);
     }
@@ -52,4 +55,3 @@ class DatabaseSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS = 1;'); // Reactivamos la revisión de claves foráneas
     }
 }
-//cperez@solubienes.com
